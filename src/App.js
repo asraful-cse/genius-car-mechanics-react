@@ -8,6 +8,7 @@ import Header from "./Pages/Shared/Header/Header";
 import AuthProvider from "./contexts/AuthProvider";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import AddServices from "./Pages/AddSevices/AddServices";
+import ServiceManage from "./Pages/ServiceManage/ServiceManage";
 
 function App() {
 	return (
@@ -30,6 +31,9 @@ function App() {
 						</PrivateRoute>
 						<Route path="/addServices">
 							<AddServices></AddServices>
+						</Route>
+						<Route path="/serviceManage">
+							<ServiceManage></ServiceManage>
 						</Route>
 						<Route path="*">
 							<NotFound></NotFound>

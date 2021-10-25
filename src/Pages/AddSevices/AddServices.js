@@ -3,7 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "./AddServices.css";
 const AddServices = () => {
-	const { register, handleSubmit } = useForm();
+	const { register, handleSubmit, reset } = useForm();
 
 	const onSubmit = (data) => {
 		console.log(data);
@@ -14,6 +14,7 @@ const AddServices = () => {
 				if (res.data.insertedId) {
 					alert("Successfully data added");
 				}
+				reset();
 			});
 	};
 	return (

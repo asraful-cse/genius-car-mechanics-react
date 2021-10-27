@@ -8,7 +8,7 @@ const AddServices = () => {
 	const onSubmit = (data) => {
 		console.log(data);
 		axios
-			.post("http://localhost:5000/services", data)
+			.post("https://secret-island-45830.herokuapp.com/services", data)
 
 			.then((res) => {
 				if (res.data.insertedId) {

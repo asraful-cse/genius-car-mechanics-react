@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 const ServiceManage = () => {
 	const [services, setServices] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:5000/services")
+		fetch("https://secret-island-45830.herokuapp.com/services")
 			.then((res) => res.json())
 			.then((data) => setServices(data));
 	}, []);
 	const handleDelete = (id) => {
-		fetch(`http://localhost:5000/services/${id}`, {
+		fetch(`https://secret-island-45830.herokuapp.com/services/${id}`, {
 			method: "DELETE",
 		})
 			.then((res) => res.json())
